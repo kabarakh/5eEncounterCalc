@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.4.0",
+    "lodash": "^4.17.21",
     "pinia": "^2.0.23",
     "vue": "^3.2.41"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.186",
     "@types/node": "^16.11.68",
     "@vitejs/plugin-vue": "^3.1.2",
     "@vue/tsconfig": "^0.1.3",
