@@ -2,14 +2,15 @@ import { defineStore } from 'pinia'
 import { useStorage } from '@vueuse/core';
 import type { Characters } from '@/interfaces/Characters';
 import { LEVEL_TO_EXPERIENCE } from '@/interfaces/Characters';
+import type {Monsters} from "@/interfaces/Monsters";
 
 export const useEncounterStore = defineStore({
   id: "encounter-data",
   state: () => {
     return {
       characters: useStorage<Characters[]>('encounter.characters', []),
-      monsters: useStorage('encounter.monsters', []),
-      useCr: useStorage('encounter.useCr', false)
+      monsters: useStorage<Monsters[]>('encounter.monsters', []),
+      useCr: useStorage<boolean>('encounter.useCr', false)
     }
   },
   getters: {
@@ -32,5 +33,15 @@ export const useEncounterStore = defineStore({
     },
     getEncounterXpRating: () => {},
     getEncounterDifficulty: () => {}
+  },
+  actions: {
+    addCharacters(number: number, level: number) {
+      const characterOfGivenLevel = this.characters.find(character => character.level === level);
+      if (characterOfGivenLevel) {
+        characterOfGivenLevel.number += number;
+      } else {
+        this.characters.push({number: number, level: level});
+      }
+    }
   }
 })
