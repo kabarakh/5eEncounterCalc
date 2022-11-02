@@ -7,8 +7,16 @@ const store = useEncounterStore();
 </script>
 
 <template>
-  <PartyList/>
-  <MonsterList/>
-  <span :class="store.getEncounterRating.toLowerCase()"
-        v-if="store.characters.length && store.monsters.length">{{ store.getEncounterRating }}</span>
+  <v-container>
+    <v-row>
+      <v-col>
+        <PartyList/>
+      </v-col>
+      <v-col>
+        <MonsterList/>
+      </v-col>
+    </v-row>
+    <span :class="store.getEncounterRating.toLowerCase()"
+          v-if="store.characters.length && store.monsters.length">{{ store.getEncounterRating }}</span>
+  </v-container>
 </template>
