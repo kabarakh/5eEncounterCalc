@@ -26,7 +26,7 @@ const removeCharacters = (level: number) => {
       <td>{{ characters.level }}</td>
       <td>{{ characters.number }}</td>
       <td>
-        <v-btn variant="elevated" type="button" @click.prevent="removeCharacters(characters.level)">Delete</v-btn>
+        <v-btn color="secondary" variant="elevated" type="button" @click.prevent="removeCharacters(characters.level)">Delete</v-btn>
       </td>
     </tr>
     </tbody>

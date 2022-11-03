@@ -30,7 +30,7 @@ const removeMonsters = (xp: number) => {
       <td>{{ monsters.xp }}</td>
       <td>{{ monsters.number }}</td>
       <td class="py-1">
-        <v-btn variant="elevated" type="button" @click.prevent="removeMonsters(monsters.xp)">Delete</v-btn>
+        <v-btn color="secondary" variant="elevated" type="button" @click.prevent="removeMonsters(monsters.xp)">Delete</v-btn>
       </td>
     </tr>
     </tbody>

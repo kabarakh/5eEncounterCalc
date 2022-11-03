@@ -13,6 +13,14 @@ import { createVuetify } from 'vuetify'
 const vuetify = createVuetify({
   theme: {
     defaultTheme: 'dark',
+    themes: {
+      dark: {
+        colors: {
+          primary: "#060",
+          secondary: "#600"
+        }
+      }
+    }
   },
 })
 

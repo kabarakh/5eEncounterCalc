@@ -32,7 +32,7 @@ const addCharacters = () => {
       ]"></v-text-field>
       </v-col>
       <v-col>
-        <v-btn type="submit" variant="elevated">Add</v-btn>
+        <v-btn type="submit" color="primary" variant="elevated">Add</v-btn>
       </v-col>
     </v-row>
   </v-form>
