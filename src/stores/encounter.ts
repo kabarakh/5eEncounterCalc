@@ -38,8 +38,7 @@ const ENCOUNTER_MULTIPLIER_STEPS = [
   },
 ];
 
-export const useEncounterStore = defineStore({
-  id: 'encounter-data',
+export const useEncounterStore = defineStore('encounter-data', {
   state: () => {
     return {
       characters: useStorage<Characters[]>('encounter.characters', []),
